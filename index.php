@@ -22,12 +22,18 @@ $( document ).ready(function() {
     url:url,
     success:function(data){
       console.log(data)
-      
       data.results.forEach(photo=>{
-        data.results= $("#imageContainer").empty().append(
-        `<img class= "count" src="${photo.urls.regular}"/>`
-      )
-    })
+        $("body").css({
+          'background-image' : 'url('+photo.urls.regular+')',
+
+        });
+      })
+      // $("body").css("background-image", "url("+photo.urls.regular+")"); 
+    //   data.results.forEach(photo=>{
+    //     data.results= $("#imageContainer").empty().append(
+    //     `<img class= "count" src="${photo.urls.regular}"/>`
+    //   )
+    // })
     }
   })
 
@@ -42,10 +48,8 @@ $( document ).ready(function() {
       console.log(data)
       
       data.results.forEach(photo=>{
-        data.results= $("#imageContainer").empty().append(
-        `<img class= "count" src="${photo.urls.regular}"/>`
-      )
-    })
+       $("body").css("background-image", "url("+photo.urls.regular+")"); 
+      })
     }
   }) 
     }
@@ -60,10 +64,8 @@ $( document ).ready(function() {
       console.log(data)
       
       data.results.forEach(photo=>{
-        data.results= $("#imageContainer").empty().append(
-        `<img class= "count" src="${photo.urls.regular}"/>`
-      )
-    })
+       $("body").css("background-image", "url("+photo.urls.regular+")"); 
+      })
     }
   }) 
 })  
@@ -72,9 +74,9 @@ $( document ).ready(function() {
 </script>
 </head>
 <body >
-  
+
  <div class="centered">
-   <!-- <div class="row"> -->
+   <div class="row">
      <div class="col-mid-12" id="boot">
   <div class="card-container">
 <div class="search">
@@ -95,8 +97,8 @@ $( document ).ready(function() {
 </div>
   </div>
 </div>
-<!-- </div> -->
 </div>
-<div id="imageContainer"></div>
+</div>
+
 </body>
 </html>
