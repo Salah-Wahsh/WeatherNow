@@ -94,7 +94,7 @@ h3.temp {
   .centered{ 
     position: absolute;
     top: 50%;
-    left: 43%;
+    left: 47%;
     transform: translate(-50%, -50%);
     z-index: 2;
     width: 80%;
@@ -102,12 +102,12 @@ h3.temp {
   input.search-bar {
     border: none;
     outline: none;
-    padding: .3em;
-    border-radius: 18px;
+    padding: .1em;
+    border-radius: 20px;
     background-color: #7c7c7c2b;
     color: white;
     font-family: inherit;
-    font-size: 100%;
+    font-size: 95%;
     
   }
   button {
